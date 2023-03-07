@@ -1,5 +1,5 @@
 # Website
-https://github.com/carrollJaden
+http://louslist-a8.herokuapp.com/
 # Developers
 This is a basic Django website developed by students at the University of Virginia (UVA): **Jaden Carroll, Ratik Mathur, Cooper Scher, and Sarah Rolfe**. The website displays courses offered by the University alongside other useful information to aid in creating a schedule. Other additional features include: saving courses to a "shopping cart," making a schedule to view, and adding friends to view their schedules.
 
