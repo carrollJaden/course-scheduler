@@ -17,11 +17,18 @@ from django.urls import include, path
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.contrib.auth.views import LogoutView
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    path('polls/', include('polls.urls')),
+    path('', include('home.urls')),
+    path('', include('cart.urls')),
+    path('', include('schedule.urls')),
+    path('friends/', include('friends.urls')),
+    path('about/', TemplateView.as_view(template_name="about.html")),
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name="index.html")),
+    path('login/', TemplateView.as_view(template_name="login.html")),
     path('accounts/', include('allauth.urls')),
     path('logout', LogoutView.as_view()),
+    path('profile/', include('user_profile.urls')),
 ]
+urlpatterns += staticfiles_urlpatterns()

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+	
+{% block content %}
+    <div align="left" class="btn-group-vertical">
+        <form method="POST">
+            {% csrf_token %}
+            {% for x,y in Info%}
+                <div class="col-md-12 mb-1">
+                    <button type="submit" name="class" value={{y}}>See Class</button> <nobr>
+                    <p style="display:inline"> {{x}} </p>            
+                </div>
+            {% endfor %}
+        </form>
+    </div>
+    <br>
+{% endblock content %}
